@@ -62,12 +62,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				chat: {
-					user: '#3b82f6',
-					assistant: '#f3f4f6',
-					'user-text': '#ffffff',
-					'assistant-text': '#374151'
-				}
+				'chat-user': '#3b82f6',
+				'chat-user-text': '#ffffff',
+				'chat-assistant': '#374151',
+				'chat-assistant-text': '#f9fafb'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -92,11 +90,11 @@ export default {
 					}
 				},
 				'fade-in': {
-					from: {
+					'0%': {
 						opacity: '0',
 						transform: 'translateY(10px)'
 					},
-					to: {
+					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
