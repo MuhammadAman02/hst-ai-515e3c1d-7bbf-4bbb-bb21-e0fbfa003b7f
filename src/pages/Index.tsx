@@ -98,28 +98,28 @@ const Index = () => {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto max-w-4xl h-screen flex flex-col">
         {/* Header */}
-        <div className="bg-white border-b shadow-sm p-4">
+        <div className="bg-gray-800 border-b border-gray-700 shadow-lg p-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
               <MessageCircle className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-semibold text-gray-900">AI Chatbot</h1>
-              <p className="text-sm text-gray-500">Powered by OpenAI</p>
+              <h1 className="text-xl font-semibold text-white">AI Chatbot</h1>
+              <p className="text-sm text-gray-400">Powered by OpenAI</p>
             </div>
           </div>
         </div>
         
         {/* API Key Warning */}
         {!import.meta.env.VITE_OPENAI_API_KEY && (
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 m-4 rounded">
+          <div className="bg-yellow-900/50 border-l-4 border-yellow-500 p-4 m-4 rounded backdrop-blur-sm">
             <div className="flex items-center">
               <AlertCircle className="w-5 h-5 text-yellow-400 mr-2" />
               <div>
-                <p className="text-sm text-yellow-800">
+                <p className="text-sm text-yellow-200">
                   <strong>Configuration Required:</strong> Please add your OpenAI API key as VITE_OPENAI_API_KEY in your environment variables.
                 </p>
               </div>
@@ -128,7 +128,7 @@ const Index = () => {
         )}
         
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto bg-white">
+        <div className="flex-1 overflow-y-auto bg-gray-900">
           <div className="space-y-1">
             {messages.map((message) => (
               <ChatMessage key={message.id} message={message} />
