@@ -1,0 +1,6 @@
+[
+  {
+    "role": "user",
+    "content": "The deployment failed with the following error from Fly.io:\n\nFailed to authenticate with Fly.io: /bin/sh: 1: flyctl: not found\n\n\nPlease fix the issue."
+  }
+]
